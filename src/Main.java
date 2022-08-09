@@ -31,5 +31,48 @@ public class Main {
         } else {
             System.out.println("Год не является високосным");
         }
+        //Задание 4
+        int deliveryDistance=60;
+        int standartDelivery=deliveryDistance-20;
+        int standartTimeDelivery=1;
+        int distanceDifference=standartDelivery/40;
+        boolean additionalsDays=deliveryDistance<=20;
+        int delivery=distanceDifference+standartTimeDelivery;
+        int hardDelivery=distanceDifference+standartTimeDelivery+1;
+        if (additionalsDays) {
+            System.out.println("Потребуется дней: " + standartTimeDelivery);
+        } else if (standartDelivery%40>0) {
+            System.out.println("Потребуется дней: "+hardDelivery);
+        }
+        else {
+            System.out.println("Потребуется дней: "+delivery);
+        }
+        //Задание 5
+        int monthNumber=1;
+        switch (monthNumber){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осень");
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
+        }
     }
-}
+    }
+
